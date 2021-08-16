@@ -5,27 +5,6 @@ const {
   addContact,
 } = require("./contacts");
 
-// addContact({ name: "denia", email: "loh", phone: 213123123123 });
-// const c = require("./contacts.json");
-
-// listContacts();
-
-// getContactById(10);
-
-// removeContact(7);
-// const d = async () => {
-//   console.log(1);
-//   try {
-//     const a = await removeContact(7);
-//     console.log(a);
-//   } catch (error) {
-//     console.log(2);
-//     console.log(error.message);
-//   }
-// };
-
-// d();
-
 const { Command } = require("commander");
 const program = new Command();
 program
@@ -39,7 +18,6 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-// TODO: рефакторить
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
     case "list":
